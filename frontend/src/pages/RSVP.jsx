@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../config.js';
 import { useState } from 'react'
 import { Heart, ArrowLeft, CheckCircle, MapPin } from 'lucide-react'
 import './RSVP.css'
@@ -34,7 +35,7 @@ function RSVP() {
     setError('')
 
     try {
-      const response = await fetch('http://localhost:8081/api/rsvp', {
+      const response = await fetch(`${API_BASE_URL}/api/rsvp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

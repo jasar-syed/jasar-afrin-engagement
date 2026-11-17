@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../../config.js';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Heart, LockKeyhole, Mail } from 'lucide-react';
@@ -18,7 +19,7 @@ function AdminLogin() {
     const token = btoa(`${email}:${password}`);
 
     try {
-      const response = await fetch('http://localhost:8081/api/rsvp', {
+      const response = await fetch(`${API_BASE_URL}/api/rsvp`, {
         headers: {
           Authorization: `Basic ${token}`,
         },

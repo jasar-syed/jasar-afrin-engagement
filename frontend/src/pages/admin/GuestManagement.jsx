@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../../config.js';
 import { useEffect, useMemo, useState } from 'react';
 import { Users, Search, Download, CheckCircle2, Clock3 } from 'lucide-react';
 import './GuestManagement.css';
@@ -14,7 +15,7 @@ function GuestManagement() {
       const token = sessionStorage.getItem('adminToken');
       if (!token) throw new Error('Admin session expired. Please log in again.');
 
-      const response = await fetch('http://localhost:8081/api/rsvp', {
+      const response = await fetch(`${API_BASE_URL}/api/rsvp`, {
         headers: { Authorization: `Basic ${token}` }
       });
 
