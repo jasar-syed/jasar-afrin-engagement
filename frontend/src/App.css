@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+.welcome-page {
+  --gold: #b18b58;
+  --deep-gold: #87653d;
+  --ink: #554331;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 50% 42%, #fffefa 0%, #fbf5e9 55%, #eee2cf 100%);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.welcome-page::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px solid #c5a878;
+  outline: 1px solid #d9c6a5;
+  outline-offset: 5px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.welcome-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: #fff9eb;
+  filter: blur(80px);
+  opacity: .7;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.welcome-header {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 9%;
+  color: var(--gold);
+}
+
+.welcome-monogram {
+  font: 600 30px 'Cormorant Garamond', serif;
+  letter-spacing: 2px;
+}
+
+.welcome-monogram i {
+  font-style: italic;
+}
+
+.welcome-header-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-height: 650px;
+  padding: 45px 20px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.welcome-topline {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.welcome-intro {
+  margin: 38px 0 8px;
+  color: #947b5b;
+  font: italic 24px 'Cormorant Garamond', serif;
+}
+
+.welcome-names {
+  margin: 0;
+  color: #705337;
+  font: 400 clamp(76px, 11vw, 120px)/.8 'Cormorant Garamond', serif;
+  letter-spacing: -3px;
+}
+
+.welcome-names span {
+  display: block;
+  margin: 13px 0;
+  color: var(--gold);
+  font-size: .48em;
+  font-style: italic;
+}
+
+.welcome-ornament {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 31px 0 20px;
+  color: var(--gold);
+}
+
+.welcome-ornament i {
+  display: block;
+  width: 65px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b18b58);
+}
+
+.welcome-ornament i:last-child {
+  transform: rotate(180deg);
+}
+
+.welcome-message {
+  color: #806d55;
+  font: 21px/1.6 'Cormorant Garamond', serif;
+  margin: 0;
+}
+
+.welcome-envelope-wrap {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.welcome-envelope {
+  position: relative;
+  width: 245px;
+  height: 157px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  filter: drop-shadow(0 16px 17px #7c603326);
+  cursor: pointer;
+}
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #ddc8a6;
+  border: 1px solid #b99a6c;
+}
+
+.envelope-paper {
+  position: absolute;
+  width: 79%;
+  height: 115%;
+  top: -22%;
+  left: 10.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  background: #fffdf7;
+  color: var(--gold);
+  border: 1px solid #e3d5bd;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.paper-small {
+  font: 8px 'DM Sans', sans-serif;
+  letter-spacing: 3px;
+}
+
+.envelope-paper strong {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.envelope-paper strong i {
+  font-style: italic;
+}
+
+.envelope-front {
+  position: absolute;
+  inset: 0;
+  background: #e8d7bb;
+  clip-path: polygon(0 0, 50% 62%, 100% 0, 100% 100%, 0 100%);
+  border: 1px solid #b99a6c;
+}
+
+.envelope-flap {
+  position: absolute;
+  inset: 0;
+  background: #d8c09b;
+  clip-path: polygon(0 0, 100% 0, 50% 66%);
+  transform-origin: top;
+}
+
+.envelope-seal {
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff6e7;
+  background: #a77c4b;
+  border: 2px solid #d8bd91;
+  box-shadow: 0 2px 5px #5d412b33;
+}
+
+.envelope-instruction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--deep-gold);
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.welcome-date {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 36px;
+  color: var(--deep-gold);
+  text-align: left;
+}
+
+.welcome-date > span {
+  font: 500 48px/.9 'Cormorant Garamond', serif;
+  border-right: 1px solid #c5a878;
+  padding-right: 15px;
+}
+
+.welcome-date div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.welcome-date strong {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.welcome-date small {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.welcome-flower {
+  position: absolute;
+  color: #b38e5b;
+  opacity: .15;
+  font-size: 190px;
+  pointer-events: none;
+}
+
+.flower-one {
+  top: 17%;
+  left: -55px;
+  transform: rotate(-25deg);
+}
+
+.flower-two {
+  right: -50px;
+  bottom: 16%;
+  font-size: 220px;
+  transform: rotate(20deg);
+}
+
+.flower-three {
+  top: 53%;
+  right: 12%;
+  font-size: 65px;
+}
+
+.welcome-footer {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 27px 15px 35px;
+  color: #9a805c;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 600px) {
+  .welcome-header {
+    padding: 28px 9%;
+  }
+
+  .welcome-header-label {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .welcome-content {
+    padding-top: 55px;
+  }
+
+  .welcome-topline {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .welcome-intro {
+    font-size: 21px;
+    margin-top: 35px;
+  }
+
+  .welcome-names {
+    font-size: clamp(76px, 20vw, 105px);
+  }
+
+  .welcome-message {
+    font-size: 19px;
+  }
+
+  .welcome-envelope {
+    transform: scale(.92);
+  }
+
+  .welcome-footer {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .welcome-page::before {
+    inset: 10px;
+  }
+}

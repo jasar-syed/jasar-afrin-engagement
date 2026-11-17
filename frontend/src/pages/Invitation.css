@@ -1,0 +1,200 @@
+.invitation-page {
+  min-height: 100vh;
+  padding: 35px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at top, #fffdf6 0%, transparent 65%),
+    #eee7d9;
+  color: #44352a;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.invitation-card {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  padding: 55px 45px 35px;
+  text-align: center;
+  background: #fffdf8;
+  border: 1px solid #c7a66b;
+  outline: 1px solid #c7a66b;
+  outline-offset: 8px;
+  box-shadow: 0 20px 70px #57452b18;
+}
+
+.invitation-back {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #806b4c;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.invitation-ornament {
+  color: #b28b4e;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.invitation-eyebrow,
+.countdown-heading {
+  letter-spacing: 4px;
+  font-size: 10px;
+  color: #987747;
+}
+
+.invitation-blessing {
+  margin-top: 25px;
+  color: #8e7960;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.invitation-names {
+  margin: 15px 0;
+  font-size: clamp(43px, 8vw, 72px);
+  font-weight: 400;
+  color: #60452e;
+}
+
+.invitation-names span {
+  color: #b28b4e;
+  font-style: italic;
+}
+
+.invitation-divider {
+  color: #b28b4e;
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.invitation-card h2 {
+  font-size: 29px;
+  font-weight: 400;
+  color: #725437;
+}
+
+.invitation-message {
+  margin: 22px 0;
+  line-height: 2;
+  font-size: 15px;
+  color: #75685b;
+}
+
+.invitation-date {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #987747;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.countdown-heading {
+  margin-bottom: 18px;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 490px;
+  margin: auto;
+}
+
+.countdown-item {
+  padding: 18px 5px;
+  background: #f5f0e5;
+  border: 1px solid #e7dcc7;
+}
+
+.countdown-item strong {
+  display: block;
+  font-size: 31px;
+  font-weight: 400;
+  color: #765634;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-item span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #987747;
+}
+
+.invitation-family-space {
+  margin: 35px auto 25px;
+  color: #a17e4b;
+}
+
+.invitation-family-space p {
+  color: #77634d;
+  font-size: 14px;
+}
+
+.invitation-family-space span {
+  display: block;
+  margin-top: 8px;
+  color: #b1a18b;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.invitation-next {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 25px;
+  border: 1px solid #a98754;
+  background: #74583a;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.invitation-next:hover {
+  background: #513b27;
+}
+
+.invitation-footer {
+  margin-top: 35px;
+  color: #ad9878;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 520px) {
+  .invitation-card {
+    padding: 65px 20px 30px;
+  }
+
+  .invitation-message br {
+    display: none;
+  }
+
+  .countdown-grid {
+    gap: 6px;
+  }
+
+  .countdown-item strong {
+    font-size: 24px;
+  }
+
+  .invitation-date {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}

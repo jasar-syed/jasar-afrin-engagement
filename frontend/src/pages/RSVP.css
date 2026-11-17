@@ -1,0 +1,239 @@
+.rsvp-page {
+  min-height: 100vh;
+  padding: 35px 18px 55px;
+  background:
+    radial-gradient(ellipse at top, #fffdf6 0%, transparent 65%),
+    #eee7d9;
+  color: #493b30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.rsvp-back {
+  width: min(100%, 560px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #806443;
+  text-decoration: none;
+  margin-bottom: 22px;
+  font-size: 13px;
+}
+
+.rsvp-card {
+  width: min(100%, 560px);
+  position: relative;
+  background: #fffdf8;
+  border: 1px solid #c7a66b;
+  outline: 1px solid #c7a66b;
+  outline-offset: 7px;
+  padding: 42px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(75, 55, 35, 0.09);
+}
+
+.rsvp-decoration {
+  color: #b18b54;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.rsvp-heart {
+  color: #b18b54;
+  margin-bottom: 12px;
+}
+
+.rsvp-eyebrow {
+  color: #a27c48;
+  letter-spacing: 3px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.rsvp-card h1 {
+  font-family: Georgia, serif;
+  color: #60452e;
+  font-size: clamp(36px, 7vw, 48px);
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.rsvp-description {
+  color: #85796e;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 auto 30px;
+  max-width: 390px;
+}
+
+.rsvp-card form {
+  text-align: left;
+}
+
+.rsvp-card form > label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 20px 0 9px;
+  color: #665444;
+}
+
+.rsvp-card input:not([type="radio"]),
+.rsvp-card textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e4d9ca;
+  border-radius: 3px;
+  background: #fff;
+  color: #493b30;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.rsvp-card input:focus,
+.rsvp-card textarea:focus {
+  border-color: #b18b54;
+  box-shadow: 0 0 0 2px #b18b5418;
+}
+
+.rsvp-card textarea {
+  resize: vertical;
+  min-height: 105px;
+}
+
+.optional {
+  color: #a18e74;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.attendance-options {
+  display: grid;
+  gap: 10px;
+}
+
+.attendance-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #e4d9ca;
+  border-radius: 4px;
+  background: #fffefa;
+  color: #665444;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.attendance-option:hover {
+  border-color: #b18b54;
+  background: #faf6ee;
+}
+
+.attendance-option.selected {
+  border-color: #b18b54;
+  background: #f7f0e3;
+  box-shadow: inset 3px 0 #b18b54;
+}
+
+.attendance-option input {
+  accent-color: #a27c48;
+  width: 16px;
+  height: 16px;
+}
+
+.attendance-emoji {
+  font-size: 18px;
+}
+
+.rsvp-submit,
+.success-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 16px;
+  border: 1px solid #a98754;
+  border-radius: 2px;
+  background: #74583a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  font-family: inherit;
+  font-size: 11px;
+  transition: background 0.2s;
+}
+
+.rsvp-submit:hover,
+.success-card button:hover {
+  background: #513b27;
+}
+
+.rsvp-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rsvp-map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: #896b43;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.rsvp-map-link:hover {
+  text-decoration: underline;
+}
+
+.rsvp-error {
+  color: #a33c32;
+  font-size: 13px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.rsvp-footer {
+  color: #a27c48;
+  font-family: Georgia, serif;
+  font-style: italic;
+  margin: 30px 0 0;
+  font-size: 14px;
+}
+
+.success-card {
+  margin-top: 40px;
+  color: #947346;
+  padding-top: 55px;
+  padding-bottom: 45px;
+}
+
+.success-card p {
+  color: #85796e;
+  line-height: 1.8;
+}
+
+@media (max-width: 520px) {
+  .rsvp-page {
+    padding: 24px 14px 40px;
+  }
+
+  .rsvp-card {
+    padding: 32px 21px;
+  }
+
+  .rsvp-eyebrow {
+    letter-spacing: 2px;
+    font-size: 9px;
+  }
+}
