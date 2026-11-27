@@ -40,7 +40,8 @@ public class SecurityConfig {
             "http://localhost:5173",
             "http://localhost:5174",
             "http://localhost:5175",
-            "https://jasar-afrin-engagement-6x0va5a26-jasar-afrin-engagement.vercel.app"
+            "https://jasar-afrin-engagement-6x0va5a26-jasar-afrin-engagement.vercel.app",
+            "https://jasar-afrin-engagement.vercel.app"
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "OPTIONS"));
