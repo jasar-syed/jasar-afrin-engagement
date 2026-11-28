@@ -153,7 +153,7 @@ function RSVP() {
             onChange={update}
             placeholder="Enter total number of members"
             required={form.attendance === 'ATTENDING'}
-            disabled={form.attendance !== 'ATTENDING'}
+            disabled={false}
           />
 
           <label htmlFor="requests">
