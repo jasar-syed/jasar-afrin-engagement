@@ -87,8 +87,8 @@ export default function Invitation() {
 
         <div className="invitation-family-space">
           <Heart size={16} />
-          <p>Celebrating with the love and blessings of our families</p>
-          <span>Family names will be added here</span>
+          <p>Where Two Hearts Meet, Two Families Unite</p>
+          <span>Join Jasar &amp; Afrin as they begin a beautiful new journey.</span>
         </div>
 
         <button
