@@ -3,9 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Heart, MapPin, CalendarDays, ArrowLeft, ArrowRight } from 'lucide-react'
 import './Invitation.css'
+import { useMusic } from '../MusicContext.jsx'
 
 export default function Invitation() {
   const navigate = useNavigate()
+  const { isPlaying, toggleMusic } = useMusic()
   const eventDate = new Date('2026-12-25T18:00:00+05:30')
 
   const calculateTime = () => {
@@ -49,6 +51,15 @@ export default function Invitation() {
         <h1 className="invitation-names">
           Jasar <span>&</span> Afrin
         </h1>
+
+        <button
+          className="invitation-music-button"
+          onClick={toggleMusic}
+          type="button"
+          aria-pressed={isPlaying}
+        >
+          {isPlaying ? 'Ⅱ Pause Music' : '▶ Play Our Song'}
+        </button>
 
         <div className="invitation-divider">
           <span>❧</span>

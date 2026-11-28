@@ -8,18 +8,21 @@ import Invitation from './pages/Invitation.jsx'
 import Venue from './pages/Venue.jsx'
 import AdminLogin from './pages/admin/AdminLogin.jsx'
 import AdminDashboard from './pages/admin/AdminDashboard.jsx'
+import { MusicProvider } from './MusicContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/invitation" element={<Invitation />} />
-        <Route path="/venue" element={<Venue />} />
-        <Route path="/rsvp" element={<RSVP />} />
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
-      </Routes>
+      <MusicProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/invitation" element={<Invitation />} />
+          <Route path="/venue" element={<Venue />} />
+          <Route path="/rsvp" element={<RSVP />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        </Routes>
+      </MusicProvider>
     </BrowserRouter>
   </StrictMode>,
 )

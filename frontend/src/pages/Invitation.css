@@ -198,3 +198,26 @@
     letter-spacing: 1px;
   }
 }
+
+/* Invitation music button */
+.invitation-music-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px auto 24px;
+  padding: 12px 26px;
+  border: 1px solid #c49a55;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #c49a55, #ead5a8);
+  color: #382817;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.invitation-music-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(120, 82, 35, 0.2);
+}
