@@ -140,22 +140,21 @@ function RSVP() {
             ))}
           </div>
 
-          {form.attendance === 'ATTENDING' && (
-            <>
-              <label htmlFor="members">Total members attending *</label>
-              <input
-                id="members"
-                name="members"
-                type="number"
-                min="1"
-                max="50"
-                value={form.members}
-                onChange={update}
-                placeholder="Enter total number of members"
-                required
-              />
-            </>
-          )}
+          <label htmlFor="members">
+            Total members attending {form.attendance === 'ATTENDING' ? '*' : '(Only if attending)'}
+          </label>
+          <input
+            id="members"
+            name="members"
+            type="number"
+            min="1"
+            max="50"
+            value={form.members}
+            onChange={update}
+            placeholder="Enter total number of members"
+            required={form.attendance === 'ATTENDING'}
+            disabled={form.attendance !== 'ATTENDING'}
+          />
 
           <label htmlFor="requests">
             Any wishes or special message? <span className="optional">(Optional)</span>
